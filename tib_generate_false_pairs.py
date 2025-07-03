@@ -20,7 +20,7 @@ root_files   = {}                 # base → root filename
 comm_files   = defaultdict(list)  # base → list[commentary filenames]
 
 for fname in os.listdir(DATA_DIR):
-    stem = Path(fname).stem.lower()
+    stem = Path(fname).stem
     if stem.endswith("_root"):
         base = stem.rsplit("_", 1)[0]
         root_files[base] = fname
